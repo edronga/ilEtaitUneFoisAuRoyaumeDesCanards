@@ -187,7 +187,7 @@ bName = 'goInFrontOfThePanel'
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,18], [44,18], [48,26], [17,34], [28,35], [39,42], [12,30]]
+        const list = [[28,18], [44,18], [48,26], [17,34], [28,35], [39,42], [12,29]]
         list.forEach((position) => {
             if (position[0] === CACHE.targetTile.x && position[1] === CACHE.targetTile.y){
                 r = true
