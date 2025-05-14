@@ -257,9 +257,9 @@ eventListLimoges.add(bName, bCondition, bAction)
 bName = 'forbiddenHouse'
 bCondition = checkIfPosition(46, 25)
 bAction = function () {
-    bText = `Non mais ça va pas ou quoi Jeanne ?\n On rentre pas comme ça chez les gens. Je pense qu'il va falloir apprendres les bonnes manières et oublieux les habitudes de bouseux vite fait bien fait.`
+    bText = `Non mais !\nCa va pas ou quoi Jeanne ?\n On rentre pas comme ça chez les gens, enfin !\nJe pense qu'il va falloir apprendre les bonnes manières et oublier les habitudes de bouseux vite fait bien fait.`
     addNarration(bText, true, 'white', 'black')
-    CACHE.player.tilePosition = {x: 46, y: 26}
+    teleport('mapLimoges', 46, 26)
 }
 eventListLimoges.add(bName, bCondition, bAction)
 
