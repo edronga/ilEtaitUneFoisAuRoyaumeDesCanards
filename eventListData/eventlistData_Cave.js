@@ -74,7 +74,7 @@ bAction = function(){
 }
 eventListCave.add(bName, bCondition, bAction)
 
-Name = 'smoothTalkAndStopToMachine'
+bName = 'smoothTalkAndStopToMachine'
 bCondition = function(){
     if (CACHE.eventTracker['hasInteractedWithMachine'] === undefined){
         return false
