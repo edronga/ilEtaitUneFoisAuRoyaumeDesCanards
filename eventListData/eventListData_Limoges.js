@@ -88,38 +88,16 @@ bCondition = function(){
     return false
 }
 bAction = function(){
-    bText = `Il était une fois au royaume des canards, une villaine petite créature qui révait d'être un cygne.\n\n- J'en ai marre, dit-elle, de cette vie de merde.\n\n(Il faut préciser qu'en plus d'être villaine, elle était fort malpolie)`
+    bText = `Il était une fois au royaume des canards, une villaine petite créature qui révait d'être un cygne.\n\n- J'en ai marre, dit-elle, de cette vie de merde.\n\n(Il faut préciser qu'en plus d'être villaine, elle était fort malpolie).`
     addNarration(bText, false, 'black', 'lightCyan')
-    bText = `- J'en ai marre, dit-elle encore, de tous ces gens cons.\n(Désolé encore...)\n- J'en ai marre, rajouta-t-elle, de cette ville de bouseux. \n\nLa liste continue, mais je vais simplifier. En gros : "J'en ai marre, j'aime me plaindre, bla bla bla".`
+    bText = `- J'en ai marre, dit-elle encore, de tous ces gens cons.\n(Désolé encore...)\n- J'en ai marre, renchérit-elle, de cette ville de bouseux. \n\nLa liste continue, mais je vais simplifier. En gros : "J'en ai marre, j'aime me plaindre, regardez-moi, bla bla bla".`
     addNarration2(bText, false, 'black', 'lightCyan')
-    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe. \nGenre Hawaï ou Tahiti. \n\n(Il se trouvait néanmoins qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
+    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe.\nGenre Hawaï ou Tahiti. \n(Il se trouvait néanmoins qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre.\nDu coup, à la place elle décida d'aller vivre à Biarritz).`
     addNarration3(bText, true, 'black', 'lightCyan')
     eventListLimoges.remove('introStandard')
 }
 eventListLimoges.add(bName, bCondition, bAction)
 
-bName ='introBirthday'
-bCondition = function(){
-    if (CACHE.eventTracker['isItYourBirthday'] !== true){
-        return false;
-    }
-    if (CACHE.touchPosition.newInput === true && CACHE.touchPosition.y <= window.innerHeight * 0.8){
-        return true;
-    }
-    return false
-}
-bAction = function(){
-    bText = `Il était une fois au royaume des canards, une villaine petite créature qui révait d'être un cygne.\n\n- J'en ai marre, dit-elle, de cette vie de merde.\n\n(Il faut préciser qu'en plus d'être villaine, elle était fort malpolie)`
-    addNarration(bText, false, 'black', 'lightCyan')
-    bText = `- J'en ai marre, dit-elle encore, de tous ces gens cons.\n(Désolé encore...)\n- J'en ai marre, rajouta-t-elle, de cette ville de bouseux. \n\nLa liste continue, mais je vais simplifier. En gros : "J'en ai marre, j'aime me plaindre, bla bla bla".`
-    addNarration2(bText, false, 'black', 'lightCyan')
-    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe. \nGenre Hawaï ou Tahiti. \n\n(Il se trouvait néamnmois qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
-    addNarration3(bText, false, 'black', 'lightCyan')
-    bText = `Et au fait, c'était son anniversaire aujourd'hui`
-    addNarration3(bText, true, 'black', 'lightCyan')
-    eventListLimoges.remove('introBirthday')
-}
-eventListLimoges.add(bName, bCondition, bAction)
 
 bName = 'panelSpeechTheOneNearHospital'
 bCondition = function(){
@@ -187,7 +165,7 @@ bCondition = function(){
     return false
 }
 bAction = function (){
-    bText = `\u2193 Supermarché (il faut de l'argent c'est pas les restos du coeur)`
+    bText = `\u2190 Supermarché (il faut de l'argent c'est pas les restos du coeur)`
     addSpeech('Pludidé le Panneau', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
     CACHE.targetTile = {x: 48, y: 26}
 }
@@ -207,11 +185,25 @@ bAction = function (){
 }
 eventListLimoges.add(bName, bCondition, bAction)
 
+bName = 'panelNextToPassage'
+bCondition = function(){
+    if (checkIfPosition(12,30)() && CACHE.targetTile.x === 12 && CACHE.targetTile.y === 29){
+        return true
+    }
+    return false
+}
+bAction = function (){
+    bText = `\u2190 Biarritz.\nWesh.`
+    addSpeech('Nono le NeauPa des Cités', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    CACHE.targetTile = {x: 12, y: 30}
+}
+eventListLimoges.add(bName, bCondition, bAction)
+
 bName = 'lookAtThePanel'
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43]]
+        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43], [12,30]]
         list.forEach((position) => {
             if (position[0] === CACHE.player.tilePosition.x && position[1] === CACHE.player.tilePosition.y){
                 r = true

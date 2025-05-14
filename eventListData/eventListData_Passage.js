@@ -78,25 +78,25 @@ bAction = function(){
         case 'money':
             bText = `Je ne peux pas vous laisser passer. Vous n'avez même pas assez d'argent pour me soudoyer. Vous devrier aller voir ailleurs si j'y suis.`
             addSpeech('[Tété le Tueur de Temps]', 'darkBlue', bText, 'black', ['argent'], passageGuardImg, false) 
-            bText = `Peut-être que Jeanne devrait justement aller voire au supermarché s'il y était. Sans vouloir être trop subtile avec les indices`
+            bText = `INDICE\nPeut-être que Jeanne devrait justement aller voire au supermarché s'il y était. Sans vouloir être trop subtile avec les indices.`
             addNarration2(bText, true, 'white', 'black')
             break;
         case 'butter':
-            bText = `Je ne peux toujours pas vous laisser passer. Je vois que vous avez du beurre. Si vous voulez faire un sandwich, il vous manque quelques ingrédients clés. `
+            bText = `Je ne peux toujours pas vous laisser passer. Je vois que vous avez du beurre. Si vous voulez faire un sandwich, il vous manque quelques ingrédients clés.`
             addSpeech('[Tété le Tueur de Temps]', 'darkBlue', bText, 'black', ['beurre'], passageGuardImg, false) 
-            bText = `Perso, et sans vouloir trop guider les choses, je pense qu'une petite visite à la piscine municipale pourrait être fructifiante. Et avec un peu de chance on pourra voir Jeanne en bikini.`
+            bText = `INDICE\nPerso, et sans vouloir trop guider les choses, je pense qu'une petite visite à la piscine municipale pourrait être fructifiante. Et avec un peu de chance on pourra voir Jeanne en bikini.`
             addNarration2(bText, true, 'white', 'black')
             break;
         case 'ham':
             bText = `Vous ne pouvez toujours pas passer. Ohé! Vous m'entendez ? On dirait presque que vous avez du jambon dans les oreilles !`
             addSpeech('[Tété le Tueur de Temps]', 'darkBlue', bText, 'black', ['jambon'], passageGuardImg, false) 
-            bText = `Bon euh me demandez pas trop la logique y'en a pas.\nIl faut aller acheter un vélo.\n(J'ai dit "y'en a pas").`
+            bText = `INDICE\nBon euh me demandez pas trop la logique y'en a pas.\nIl faut aller acheter un vélo.\n(J'ai dit "y'en a pas").`
             addNarration2(bText, true, 'white', 'black')
             break;
         case 'hairDo':
             bText = `Vous, euh... Ok ...\nJe dois dire que vous avez du style. Je ne suis pas indifférent à cette coiffure ridicule. Il manque encore un truc cela dit...`
             addSpeech('[Tété le Tueur de Temps]', 'darkBlue', bText, 'black', ['coiffure ridicule'], passageGuardImg, false) 
-            bText = `Indice : j'arrête d'aider.\nIl reste genre 3 endroits et c'est évident que personne n'a jamais eu de révélation au musée de la porcelaine. De l'autre côté de la rue par contre y'a un monsieur qui a un bateau...`
+            bText = `INDICE\nIndice : j'arrête d'aider.\nIl reste genre 3 endroits et c'est évident que personne n'a jamais eu de révélation au musée de la porcelaine. De l'autre côté de la rue par contre y'a un monsieur qui a un bateau...`
             addNarration2(bText, true, 'white', 'black')
             break;
         case 'surfingPlank':
@@ -111,9 +111,9 @@ bAction = function(){
             eventListPassage.remove('passageGuardSpeech')
             eventListPassage.add('smoothGetToRoad', () =>{return (CACHE.targetTile.x <= 0)? true: false;}, () =>{CACHE.targetTile = {x: 0, y:5}})
             eventListPassage.add('cantGoBack', checkIfPosition(7,5), () =>{
-                bText = `Jeanne hésita à repartir en arrière.\n- Ce qui est fait est fait, se dit-elle.\nElle versa larme.\n- Le passé c'est le passé, commenta-elle.\nElle était triste de partir, et en même temps pleine d'excitation pour l'avenir.\n-T'as cliqué, t'assumes, résuma-t-elle...`
+                bText = `Jeanne hésita à repartir en arrière.\n- Ce qui est fait est fait, se dit-elle.\nElle versa une larme.\n- Le passé c'est le passé, commenta-elle.\nElle était triste de partir, et en même temps pleine d'excitation pour l'avenir.\n-T'as cliqué, t'assumes, résuma-t-elle...`
                 addNarration(bText, false, 'black', 'lightCyan')
-                bText = `...Bon allez on avance un peu. En gros Jeanne eu l'air folle à fonds les violons devant le mec ultra-photogénique pendant 30 minutes. Et puis elle se décida (enfin) à faire avancer l'intrigue et à prendre la direction de Biarritz.`
+                bText = `...Bon allez on avance un peu. En gros Jeanne eu l'air folle à fond les violons devant le mec ultra-photogénique pendant 30 minutes. Et puis elle se décida (enfin) à faire avancer l'intrigue et à prendre la direction de Biarritz.`
                 addNarration2(bText, true, 'white', 'black')
                 teleport('mapPassage', 6, 5)
             })

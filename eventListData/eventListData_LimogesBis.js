@@ -35,11 +35,11 @@ bCondition = function(){
     return false
 }
 bAction = function(){
-    bText = `Il était une fois au royaume des canards, une villaine petite créature qui révait d'être un cygne.\n\n- J'en ai marre, dit-elle, de cette vie de merde.\n\n(Il faut préciser qu'en plus d'être villaine, elle était fort malpolie)`
+    bText = `Il était une fois au royaume des canards, une villaine petite créature qui révait d'être un cygne.\n\n- J'en ai marre, dit-elle, de cette vie de merde.\n\n(Il faut préciser qu'en plus d'être villaine, elle était fort malpolie).`
     addNarration(bText, false, 'black', 'lightCyan')
-    bText = `- J'en ai marre, dit-elle encore, de tous ces gens cons.\n(Désolé encore...)\n- J'en ai marre, rajouta-t-elle, de cette ville de bouseux. \n\nLa liste continue, mais je vais simplifier. En gros : "J'en ai marre, j'aime me plaindre, bla bla bla".`
+    bText = `- J'en ai marre, dit-elle encore, de tous ces gens cons.\n(Désolé encore...)\n- J'en ai marre, renchérit-elle, de cette ville de bouseux.\n\nLa liste continue, mais je vais simplifier. En gros : "J'en ai marre, j'aime me plaindre, regardez-moi, bla bla bla".`
     addNarration2(bText, false, 'black', 'lightCyan')
-    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe. \nGenre Hawaï ou Tahiti. \n\n(Il se trouvait néamnmois qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
+    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe.\nGenre Hawaï ou Tahiti.\n\n(Il se trouvait néamnmois qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
     addNarration3(bText, false, 'black', 'lightCyan')
     bText = `Et au fait, c'était son anniversaire aujourd'hui`
     addNarration3(bText, true, 'black', 'lightCyan')
@@ -221,7 +221,7 @@ bCondition = function (){
 }
 bAction = function(){
     bText = `- Bon en vrai, j'ai pas du tout envie de faire chier à tout refaire, pensa Jeanne.\n On n'a qu'à dire que j'ai tout refait, et cette fois-ci je vais directement dans la cave pour utiliser la machine à remonter le temps pour empêcher le mec qui m'a trucidé de voir le jour.`
-    addNarration(bText, true, 'white','black')
+    addNarration(bText, true, 'black','lightCyan')
     teleport('mapCave', 5,8)
 }
 eventListLimogesBis.add(bName, bCondition, bAction)

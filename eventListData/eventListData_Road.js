@@ -1,7 +1,7 @@
 'use strict'
 
 eventListRoad.add('goToCave', checkIfPosition(22,23), ()=> {teleport('mapCave', 5, 8)})
-eventListRoad.addNpc('birthdayKiller', nonPlayableCharacters.birthdayKillerLookingRight, 4, 9)
+eventListRoad.addNpc('birthdayKiller', nonPlayableCharacters.birthdayKillerLookingRight, 8, 25)
 
 bName = 'birthdayKillerSpeech'
 bCondition = function(){
@@ -12,16 +12,16 @@ bCondition = function(){
 }
 bAction = function(){
     bText = `Bonjour, je suis le tueur d'anniversaire.\nJe tue les gens dont c'est l'anniversaire.`
-    addSpeech('???', 'black', bText, 'black', [], mockCharacterSprite, false) 
+    addSpeech('???', 'black', bText, 'black', ['anniversaire'], birthdayKillerImg, false) 
     bText = `Et sans prévenir plus que ça, il tua Jeanne.`
     addNarration2(bText, false, 'black', 'lightblue')
     bText = `\n\n\n----- FIN ----- \n\n\n`
     addNarration3(bText, false, 'black', 'lightblue')
-    bText = `Oups pardon merde j'ai totalement oublié de mentionner que c'était l'anniversaire de Jeanne.\nEn vrai c'est une histoire sans queue ni tête sinon...`
+    bText = `Oups pardon merde j'ai totalement oublié de mentionner que c'était l'anniversaire de Jeanne.\nEn vrai sinon elle s'est fait tué sans raison...`
     addNarration4(bText, false, 'whitesmoke', 'black')
     bText = `Alors euh... on va dire que Jeanne, quasiment morte mais pas tout à fait, arriva à se trainer jusqu'à la cave juste à côté.\nA l'intérieur, il y a avait une machine qui servait, euh, euh..., je sais !\nA REMONTER LE TEMPS !`
     addNarration5(bText, false, 'whitesmoke', 'black')
-    bText = `On recommence...`
+    bText = `On recommence...\n(désolé pardon j'avais oublié ce petit détail d'histoire d'anniversaire)`
     addNarration6(bText, true, 'whitesmoke', 'black')
     CACHE.eventTracker['isItYourBirthday'] = true
     CACHE.heldObject.update('money', imgFlyingMoney)

@@ -25,21 +25,20 @@ eventListLimogesPast.add(bName, bCondition, bAction)
 
 
 bName ='introPast'
-bCondition = function(){
-    if (CACHE.touchPosition.newInput === true && CACHE.touchPosition.y <= window.innerHeight * 0.8){
-        return true;
-    }
-    return false
+bCondition = function() {
+    if (checkIfPosition(STARTPOSITION.x + 1, STARTPOSITION.y)()){ return true}
+    if (checkIfPosition(STARTPOSITION.x-1, STARTPOSITION.y)()){ return true}
+    if (checkIfPosition(STARTPOSITION.x, STARTPOSITION.y +1)()){ return true}
+    if (checkIfPosition(STARTPOSITION.x, STARTPOSITION.y -1)()){ return true}
+    return false;
 }
 bAction = function(){
     bText = `... rien ?\n-Ah ben si, commenta Jeanne. Il s'est passé quelque chose.`
     addNarration(bText, false, 'black', 'lightCyan')
-    bText = `Jeanne remarqua que à part la couleur, la ville n'avait pas changé d'un poil. Elle se demanda si c'était une métaphore sur le fait que la nature humainene changeait pas malgré le temps qui s'écoulait inexorablement. Ou si mec qui fait les dessins était une feignasse.`
-    addNarrationE(bText, false, 'black', 'lightCyan')
+    bText = `Jeanne remarqua que à part la couleur, la ville n'avait pas changé d'un poil. Elle se demanda si c'était une métaphore sur le fait que la nature humainene restant immuable malgré le temps qui s'écoulait inexorablement. Ou si le mec qui fait les dessins était une feignasse.`
+    addNarration2(bText, false, 'black', 'lightCyan')
     bText = `Disons que c'est probablement une métaphore`
-    addNarration(bText, false, 'white', 'black')
-    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe. \nGenre Hawaï ou Tahiti. \n\n(Il se trouvait néanmoins qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
-    addNarration3(bText, true, 'black', 'lightCyan')
+    addNarration3(bText, false, 'true', 'black')
     eventListLimogesPast.remove('introPast')
 }
 eventListLimogesPast.add(bName, bCondition, bAction)
@@ -193,22 +192,23 @@ bCondition = function (){
     if (checkIfPosition(39, 25)() || checkIfPosition (7, 31)() ||  checkIfPosition(23,42)() || checkIfPosition(26,25)()|| checkIfPosition(21,18)() || checkIfPosition(42,42)() || checkIfPosition(42, 18)() || checkIfPosition(46, 25)){
         return true
     }
+    return false
 }
 bAction = function(){
-    bText = `Au fait, attention Jeanne !\nToute intéraction avec le passé doit être mûrement pesée!\n Effet papillon, paradoxe du grand-père, qui sait quelle intrigue riche et complexe va encore se révéler...`
+    bText = `Au fait j'y pense, attention Jeanne !\nToute intéraction avec le passé doit être mûrement pesée!\n Effet papillon, paradoxe du grand-père, qui sait quelle intrigue riche et complexe va encore se révéler...`
     addNarration(bText, false, 'white','black')
     bText = '- Honnêtement, je trouve que toute cette intrigue est vraiment sans queue ni tête. A la base, moi je voulais juste repartir de zéro sur de nouvelles bases, pas partir dans des aventures cosmiques invraissemblables.'
     addNarration2(bText, false, 'black','lightCyan')
     bText = `...\nOn critique, on critique, mais bon si l'intrigue est faiblarde, c'est peut-être aussi la faute du personnage principal qui n'est pas à la hauteur !`
-    addNarration3(bText, false, 'black', 'white','black')
+    addNarration3(bText, false, 'white','black')
     bText = `Jeanne ne dit rien.\nCe qui chez elle était extrêment mauvais signe et ne laissait rien présager de bon...`
     addNarration4(bText, true, 'black','lightCyan')
     bText = `Euh...\n\n\n\n Désolé ?`
-    addNarration5(bText, false, 'black', 'white','black')
+    addNarration5(bText, false, 'white','black')
     bText = `J'EN AI MARRE ! s'écria Jeanne !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`
     addNarration6(bText, false, 'black','lightCyan')
-    bText = `Et soudain, elle se retrouva à Biarritz, avec de la bonne bouffe, du soleil, et des jolies garçons.\nElle vécut heureuse et eu beaucoup d'enfants.\nEt en plus c'était son anniversaire !`
-    addNarration5(bText, true, 'black', 'white','black')
+    bText = `Oui Madame tout de suite Madame.`
+    addNarration6(bText, true, 'white','black')
     switchAttire('bikini')
     teleport('mapBiarritz', 11,6)
 }

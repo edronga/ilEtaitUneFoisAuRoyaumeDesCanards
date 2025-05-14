@@ -53,7 +53,7 @@ bCondition = function(){
 }
 
 bAction = function(){
-    if (CACHE.eventTracker['isItYourBirthday'] !== true){
+    if (CACHE.eventTracker['isItYourBirthday'] !== true && CACHE.eventTracker['hasInteractedWithMachine'] === undefined){
         bText = `Jeanne se retrouva devant une machine impressionnante. Qui avait l'air d'avoir été oubliée là et de ne servir à rien`
         addNarration(bText, true, 'black', 'lightCyan')
     }
@@ -73,3 +73,30 @@ bAction = function(){
     
 }
 eventListCave.add(bName, bCondition, bAction)
+
+Name = 'smoothTalkAndStopToMachine'
+bCondition = function(){
+    if (CACHE.eventTracker['hasInteractedWithMachine'] === undefined){
+        return false
+    }
+    if (checkIfPosition(5,4)() || checkIfPosition(6,5)() || checkIfPosition(7,5)()){
+        return true
+    }
+    let condition = function() {
+        let r = false;
+        [[6,2],[6,3],[6,4],[7,2],[7,3],[7,4],[8,2],[8,3],[8,4]].forEach((t)=>{
+        if (t[0] === CACHE.targetTile.x && t[1] === CACHE.targetTile.y){
+            r = true
+        }
+        })
+        return r;
+    }()
+    if (checkIfPosition(7, 4)() === true && condition){
+        return true
+    }
+    return false
+}
+bAction = function(){
+    CACHE.eventTracker['stopTalkingToSailor'] = false
+}
+eventListHarbour.add(bName, bCondition, bAction)
