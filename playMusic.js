@@ -154,6 +154,23 @@ const musicFiles = ["advertising-background-music-317486.mp3",
     "wedding-romantic-love-music-282316.mp3",
     "whimsical-music-funny-comedy-awkward-memes-humor-background-277964.mp3"]
 
+let usedMusicFiles =['comedy-music-funny-quirky-cunning-silly-background-intro-theme-274541.mp3',
+    'funny-pets-cats-dogs-music-318675.mp3',
+    'spring-easter-day-music-319084.mp3',
+    'happy-birthday-song-background-music-295823.mp3',
+    'tense-suspense-background-music-320439.mp3',
+    'upbeat-jazz-music-restaurant-hotel-bar-cafe-backgorund-intro-theme-269854.mp3',
+    'corporate-music-optimistic-business-success-background-intro-theme-278388.mp3',
+    'chinese-lunar-new-year-music-283891.mp3',
+    'cyberpunk-music-neon-industrial-ai-game-286971.mp3',
+    'stomps-amp-claps-energetic-rhythmic-dynamic-background-music-277937.mp3',
+    'africa-music-ethiopia-kenya-nigeria-tanzania-cameroon-safari-tribe-269374.mp3',
+    'corporate-medical-background-music-304282.mp3',
+    'jazz-lounge-elevator-music-322314.mp3',
+    'magic-mystery-harry-potter-music-320643.mp3',
+    'meditation-music-289149.mp3',
+    'tense-suspense-background-music-320439.mp3']
+
 let musicFile = {}
 musicFiles.forEach((string) =>{
     musicFile[string] = new Audio()
