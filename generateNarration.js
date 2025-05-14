@@ -15,7 +15,7 @@ function* gen_generateNarration(text, color1 = 'black', color2 = 'white',timeInt
     const TIME_INTERVAL = timeInterval
     let timeStamp = Date.now()
     let counter = 0
-    const fontNeutral = `5dvh Garamond`
+    const fontNeutral = `4dvh Garamond`
 
     r.style.height = '80dvh'
     r.style.width = '100dvw'

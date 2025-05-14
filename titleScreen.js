@@ -20,7 +20,7 @@ function* gen_generateTitleScreen(backgroundImage = titleScreenBackgroundFaded, 
     let timeStamp = Date.now()
     let counter = 0
 
-    const font = `8dvh Brush Script MT`
+    const font = `6dvh cursive`
 
     r.style.height = '80dvh'
     r.style.width = '100dvw'

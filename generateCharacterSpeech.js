@@ -14,7 +14,7 @@ function* gen_generateCharacterSpeech(characterName, characterNameColor, charact
     function update(text, n, color1, color2){
         let r = text
         r = `<span style = 'color:${color1}'>` + r.slice(0,n) + `</span> `+ `<span style = 'color:${color2}'>` + r.slice(n) + `</span> `
-        r = `<span style = 'color:${characterNameColor}'>` + characterName + ` :</span> \n\n`+ r
+        r = `<span style = 'color:${characterNameColor}'>` + characterName + ` :</span> \n`+ r
 
         return r
     }
