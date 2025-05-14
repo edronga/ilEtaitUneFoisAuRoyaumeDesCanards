@@ -172,7 +172,7 @@ let usedMusicFiles =['comedy-music-funny-quirky-cunning-silly-background-intro-t
     'tense-suspense-background-music-320439.mp3']
 
 let musicFile = {}
-musicFiles.forEach((string) =>{
+usedMusicFiles.forEach((string) =>{
     musicFile[string] = new Audio()
     musicFile[string].src = `Music/${string}`
     musicFile[string].loop = true
