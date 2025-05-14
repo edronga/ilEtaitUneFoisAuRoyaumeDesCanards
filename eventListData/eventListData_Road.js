@@ -12,7 +12,7 @@ bCondition = function(){
 }
 bAction = function(){
     bText = `Bonjour, je suis le tueur d'anniversaire.\nJe tue les gens dont c'est l'anniversaire.`
-    addSpeech('???', 'black', bText, 'black', ['anniversaire'], birthdayKillerImg, false) 
+    addSpeech(`[Tété le Tueur d'Anniversaire]`, 'darkblue', bText, 'black', ['anniversaire'], birthdayKillerImg, false) 
     bText = `Et sans prévenir plus que ça, il tua Jeanne.`
     addNarration2(bText, false, 'black', 'lightblue')
     bText = `\n\n\n----- FIN ----- \n\n\n`

@@ -220,7 +220,7 @@ bCondition = function (){
     }
 }
 bAction = function(){
-    bText = `- Bon en vrai, j'ai pas du tout envie de faire chier à tout refaire, pensa Jeanne.\n On n'a qu'à dire que j'ai tout refait, et cette fois-ci je vais directement dans la cave pour utiliser la machine à remonter le temps pour empêcher le mec qui m'a trucidé de voir le jour.`
+    bText = `- Bon en vrai, j'ai pas du tout envie de me faire chier à tout refaire, pensa Jeanne.\n On n'a qu'à dire que j'ai tout refait, et cette fois-ci je vais directement dans la cave pour utiliser la machine à remonter le temps pour empêcher le mec qui m'a trucidé de voir le jour.`
     addNarration(bText, true, 'black','lightCyan')
     teleport('mapCave', 5,8)
 }

@@ -4,8 +4,8 @@ bName ='introAndEndingBiarritz'
 bCondition = function() {
     if (checkIfPosition(11+ 1, 6)()){ return true}
     if (checkIfPosition(11-1, 6)()){ return true}
-    if (checkIfPosition(11, 6)()){ return true}
-    if (checkIfPosition(11, 6)()){ return true}
+    if (checkIfPosition(11, 6 +1)()){ return true}
+    if (checkIfPosition(11, 6 -1)()){ return true}
     return false;
 }
 bAction = function(){
@@ -13,7 +13,7 @@ bAction = function(){
     addNarration(bText, false, 'black', 'lightCyan')
     bText = `Et ainsi, notre petite princesse, qui ne faisait que râler, avait trouvé son petit coin de paradis.\n Il ne lui restait plus qu'à vivre heureuse et à avoir beaucoup d'enfants et tous ses problèmes étaients réglés !`
     addNarration2(bText, false, 'black', 'lightCyan')
-    bText = `Et aussi :\n\n*<b/>*Joyeux anniversaire *<s/>*Mor*</s>*\nJEANNE !!!*</b>*`
+    bText = `Et aussi :\n\n*<b/>*Joyeux anniversaire\n*<s/>*M*</s>*\n*<s/>*Mor*</s>*\nJEANNE !!!*</b>*`
     addNarration3(bText, true, 'white', 'black')
     eventListBiarritz.remove('introAndEndingBiarritz')
 }

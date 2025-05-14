@@ -12,34 +12,11 @@ eventListCave.add('goToRoad', checkIfPosition(5,9), ()=> {
         teleport('mapCave', 5,8)
     }})
 
-
-
-bName = 'smoothGoInFrontOfTimeMachine'
-bCondition = function(){
-    let condition = function() {
-        let r = false;
-        [[6,2],[6,3],[6,4],[7,2],[7,3],[7,4],[8,2],[8,3],[8,4]].forEach((t)=>{
-        if (t[0] === CACHE.targetTile.x && t[1] === CACHE.targetTile.y){
-            r = true
-        }
-        })
-        return r;
-    }()
-    return condition
-}
-bAction = function(){
-    CACHE.targetTile = {
-        x: 7,
-        y: 4
-    }
-}
-eventListCave.add(bName, bCondition, bAction)
-
 bName = 'timeMachineSpeech'
 bCondition = function(){
     let condition = function() {
         let r = false;
-        [[6,2],[6,3],[6,4],[7,2],[7,3],[7,4],[8,2],[8,3],[8,4]].forEach((t)=>{
+        [[6,2],[6,3],[6,4],[7,2],[7,3],[8,2],[8,3],[8,4]].forEach((t)=>{
         if (t[0] === CACHE.targetTile.x && t[1] === CACHE.targetTile.y){
             r = true
         }
@@ -84,7 +61,7 @@ bCondition = function(){
     }
     let condition = function() {
         let r = false;
-        [[6,2],[6,3],[6,4],[7,2],[7,3],[7,4],[8,2],[8,3],[8,4]].forEach((t)=>{
+        [[6,2],[6,3],[6,4],[7,2],[7,3],[8,2],[8,3],[8,4]].forEach((t)=>{
         if (t[0] === CACHE.targetTile.x && t[1] === CACHE.targetTile.y){
             r = true
         }
@@ -97,6 +74,44 @@ bCondition = function(){
     return false
 }
 bAction = function(){
-    CACHE.eventTracker['stopTalkingToSailor'] = false
+    CACHE.eventTracker['hasInteractedWithMachine'] = false
 }
-eventListHarbour.add(bName, bCondition, bAction)
+eventListCave.add(bName, bCondition, bAction)
+
+bName = 'smoothGoInFrontOfTimeMachine'
+bCondition = function(){
+    let condition = function() {
+        let r = false;
+        [[6,2],[6,3],[6,4],[7,2],[7,3],[7,4],[8,2],[8,3],[8,4]].forEach((t)=>{
+        if (t[0] === CACHE.targetTile.x && t[1] === CACHE.targetTile.y){
+            r = true
+        }
+        })
+        return r;
+    }()
+    return condition
+}
+bAction = function(){
+    CACHE.targetTile = {
+        x: 7,
+        y: 4
+    }
+}
+eventListCave.add(bName, bCondition, bAction)
+
+
+bName = 'lookAtTheMachine'
+bCondition = checkIfPosition(7,4)
+bAction = function(){
+    baseSprite = baseFormLookingUp
+}
+eventListCave.add(bName, bCondition, bAction)
+
+bName = 'tryAndLookNormal'
+bCondition = function (){
+    return !checkIfPosition(7,4)()
+}
+bAction = function(){
+    baseSprite = baseFormLookingDown
+}
+eventListCave.add(bName, bCondition, bAction)

@@ -37,8 +37,8 @@ bAction = function(){
     addNarration(bText, false, 'black', 'lightCyan')
     bText = `Jeanne remarqua que à part la couleur, la ville n'avait pas changé d'un poil. Elle se demanda si c'était une métaphore sur le fait que la nature humainene restant immuable malgré le temps qui s'écoulait inexorablement. Ou si le mec qui fait les dessins était une feignasse.`
     addNarration2(bText, false, 'black', 'lightCyan')
-    bText = `Disons que c'est probablement une métaphore`
-    addNarration3(bText, false, 'true', 'black')
+    bText = `Disons que c'est probablement une métaphore.`
+    addNarration3(bText, true, 'white', 'black')
     eventListLimogesPast.remove('introPast')
 }
 eventListLimogesPast.add(bName, bCondition, bAction)
@@ -189,7 +189,7 @@ eventListLimogesPast.add(bName, bCondition, bAction)
 
 bName = 'fastForWardNextChapter'
 bCondition = function (){
-    if (checkIfPosition(39, 25)() || checkIfPosition (7, 31)() ||  checkIfPosition(23,42)() || checkIfPosition(26,25)()|| checkIfPosition(21,18)() || checkIfPosition(42,42)() || checkIfPosition(42, 18)() || checkIfPosition(46, 25)){
+    if (checkIfPosition(39, 25)() || checkIfPosition (7, 31)() ||  checkIfPosition(23,42)() || checkIfPosition(26,25)()|| checkIfPosition(21,18)() || checkIfPosition(42,42)() || checkIfPosition(42, 18)() || checkIfPosition(46, 25)()){
         return true
     }
     return false
@@ -197,18 +197,18 @@ bCondition = function (){
 bAction = function(){
     bText = `Au fait j'y pense, attention Jeanne !\nToute intéraction avec le passé doit être mûrement pesée!\n Effet papillon, paradoxe du grand-père, qui sait quelle intrigue riche et complexe va encore se révéler...`
     addNarration(bText, false, 'white','black')
-    bText = '- Honnêtement, je trouve que toute cette intrigue est vraiment sans queue ni tête. A la base, moi je voulais juste repartir de zéro sur de nouvelles bases, pas partir dans des aventures cosmiques invraissemblables.'
+    bText = `- Honnêtement, j'en ai, euh, ras-le-bol de cette histoire sans queue ni tête. A la base, moi je voulais juste repartir de zéro sur de nouvelles bases, pas partir dans des aventures cosmiques invraissemblables.`
     addNarration2(bText, false, 'black','lightCyan')
     bText = `...\nOn critique, on critique, mais bon si l'intrigue est faiblarde, c'est peut-être aussi la faute du personnage principal qui n'est pas à la hauteur !`
     addNarration3(bText, false, 'white','black')
     bText = `Jeanne ne dit rien.\nCe qui chez elle était extrêment mauvais signe et ne laissait rien présager de bon...`
-    addNarration4(bText, true, 'black','lightCyan')
+    addNarration4(bText, false, 'black','lightCyan')
     bText = `Euh...\n\n\n\n Désolé ?`
     addNarration5(bText, false, 'white','black')
     bText = `J'EN AI MARRE ! s'écria Jeanne !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`
     addNarration6(bText, false, 'black','lightCyan')
     bText = `Oui Madame tout de suite Madame.`
-    addNarration6(bText, true, 'white','black')
+    addNarration7(bText, true, 'white','black')
     switchAttire('bikini')
     teleport('mapBiarritz', 11,6)
 }
