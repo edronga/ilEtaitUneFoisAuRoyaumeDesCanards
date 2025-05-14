@@ -122,7 +122,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `La personne qui lit cela est bête comme ses pieds.`
-    addSpeech('Pipeau le Poteau', 'saddleBrown', bText, 'black', [], brownWoodenSignImg, true)
+    addSpeech('Pipeau le Poteau', 'saddleBrown', bText, 'black', [], brownWoodenSignImg, false)
     bText = 'lol \u{1F602}'
     addNarration2(bText, true, 'white', 'black')
     CACHE.targetTile = {x: 17, y: 35}
