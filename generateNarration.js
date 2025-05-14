@@ -15,10 +15,10 @@ function* gen_generateNarration(text, color1 = 'black', color2 = 'white',timeInt
     const TIME_INTERVAL = timeInterval
     let timeStamp = Date.now()
     let counter = 0
-    const fontNeutral = `5vh Garamond`
+    const fontNeutral = `5dvh Garamond`
 
-    r.style.height = '80vh'
-    r.style.width = '100vW'
+    r.style.height = '80dvh'
+    r.style.width = '100dvw'
     r.style.display = 'grid'
     r.style.alignItems = 'center'
     r.style.justifyItems = 'center'

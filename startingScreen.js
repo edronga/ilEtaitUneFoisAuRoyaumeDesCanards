@@ -5,10 +5,10 @@ function generateStartingScreen(backgroundImage = titleScreenBackground){
     let r = document.createElement('div')
     let newGameCaption = document.createElement('div')
     r.appendChild(newGameCaption)
-    const font = `15vh Garamond`
+    const font = `15dvh Garamond`
 
-    r.style.height = '80vh'
-    r.style.width = '100vw'
+    r.style.height = '80dvh'
+    r.style.width = '100dvw'
     r.style.display = 'grid'
     r.style.gridTemplate = `'a' '.' '.' auto / auto`
     r.style.alignItems = 'center'
@@ -21,9 +21,9 @@ function generateStartingScreen(backgroundImage = titleScreenBackground){
     r.style.backgroundPosition = 'center'
 
     newGameCaption.style.gridArea = 'a'
-    newGameCaption.style.height = '30 vh'
-    newGameCaption.style.width = '50vw'
-    newGameCaption.style.font = '5vh Garamond'
+    newGameCaption.style.height = '30 dvh'
+    newGameCaption.style.width = '50dvw'
+    newGameCaption.style.font = '5dvh Garamond'
     newGameCaption.style.color = 'whiteSmoke'
     newGameCaption.style.backgroundColor = 'red'
     newGameCaption.style.border = 'solid 4px black'

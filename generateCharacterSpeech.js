@@ -8,7 +8,7 @@ function* gen_generateCharacterSpeech(characterName, characterNameColor, charact
     const TIME_INTERVAL = timeInterval
     let timeStamp = Date.now()
     let counter = 0
-    const fontNeutral = `3vh Garamond`
+    const fontNeutral = `3dvh Garamond`
     const text = characterText
 
     function update(text, n, color1, color2){
@@ -20,8 +20,8 @@ function* gen_generateCharacterSpeech(characterName, characterNameColor, charact
     }
 
     function enrich(r){
-        let text1 = `<div style = "height: 40vh; width: 100vw; background-image: url(${bubbleSpeechImage.src}); background-position: center; background-size: contain; background-repeat: no-repeat; display: grid; align-items:center; text-align: left; text-wrap:pretty;"><p style = "font: ${fontNeutral}; margin-right: 10vw ; margin-left: 10vw; margin-bottom: 8vh">${r}</p></div>`
-        let text2 = `<div style = "height: 40vh; width: 100vw; background-image: url(${characterImage.src}) ; background-position: center;background-size: contain; background-repeat: no-repeat"></div>`
+        let text1 = `<div style = "height: 40dvh; width: 100dvw; background-image: url(${bubbleSpeechImage.src}); background-position: center; background-size: contain; background-repeat: no-repeat; display: grid; align-items:center; text-align: left; text-wrap:pretty;"><p style = "font: ${fontNeutral}; margin-right: 10dvw ; margin-left: 10dvw; margin-bottom: 8dvh">${r}</p></div>`
+        let text2 = `<div style = "height: 40dvh; width: 100dvw; background-image: url(${characterImage.src}) ; background-position: center;background-size: contain; background-repeat: no-repeat"></div>`
         return text1 + text2
     }
 
