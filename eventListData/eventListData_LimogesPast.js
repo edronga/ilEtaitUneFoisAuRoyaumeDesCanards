@@ -109,7 +109,7 @@ bCondition = function (){
     return false
 }
 bAction = function(){
-    bText = `Au fait j'y pense, attention Jeanne !\nToute intéraction avec le passé doit être mûrement pesée!\n Effet papillon, paradoxe du grand-père, qui sait quelle intrigue riche et complexe va encore se révéler...`
+    bText = `Au fait j'y pense, attention Jeanne !\nToute intéraction avec le passé doit être mûrement pesée !\n Effet papillon, paradoxe du grand-père, qui sait quelle intrigue riche et complexe va encore se révéler...`
     addNarration(bText, false, 'white','black')
     bText = `- Honnêtement, j'en ai, euh, ras-le-bol de cette histoire sans queue ni tête. A la base, moi je voulais juste repartir de zéro sur de nouvelles bases, pas partir dans des aventures cosmiques invraissemblables.`
     addNarration2(bText, false, 'black','lightCyan')
@@ -119,7 +119,7 @@ bAction = function(){
     addNarration4(bText, false, 'black','lightCyan')
     bText = `Euh...\n\n\n\n Désolé ?`
     addNarration5(bText, false, 'white','black')
-    bText = `J'EN AI MARRE ! s'écria Jeanne !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`
+    bText = `J'EN AI MARRE ! s'écria Jeanne !!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`
     addNarration6(bText, false, 'black','lightCyan')
     bText = `Oui Madame tout de suite Madame.`
     addNarration7(bText, true, 'white','black')

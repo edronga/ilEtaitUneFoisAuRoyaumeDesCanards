@@ -159,7 +159,7 @@ eventListLimoges.add(bName, bCondition, bAction)
 
 bName = 'panelSpeechTheOneNearTheForbiddenHouse'
 bCondition = function(){
-    if (checkIfPosition(48,26)() && CACHE.targetTile.x === 48 && CACHE.targetTile.y === 25){
+    if (checkIfPosition(48,27)() && CACHE.targetTile.x === 48 && CACHE.targetTile.y === 26){
         return true
     }
     return false
@@ -221,7 +221,7 @@ eventListLimoges.add(bName, bCondition, bAction)
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43]]
+        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43], [12,30]]
         list.forEach((position) => {
             if (position[0] === CACHE.player.tilePosition.x && position[1] === CACHE.player.tilePosition.y){
                 r = true
@@ -239,7 +239,7 @@ bName = 'goInFrontOfThePanel'
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,18], [44,18], [48,26], [17,34], [28,35], [39,42]]
+        const list = [[28,18], [44,18], [48,26], [17,34], [28,35], [39,42], [12,30]]
         list.forEach((position) => {
             if (position[0] === CACHE.targetTile.x && position[1] === CACHE.targetTile.y){
                 r = true

@@ -16,13 +16,13 @@ bAction = function(){
     bText = `Et sans prévenir plus que ça, il tua Jeanne.`
     addNarration2(bText, false, 'black', 'lightblue')
     bText = `\n\n\n----- FIN ----- \n\n\n`
-    addNarration3(bText, false, 'black', 'lightblue')
+    addNarration3(bText, false, 'red', 'white')
     bText = `Oups pardon merde j'ai totalement oublié de mentionner que c'était l'anniversaire de Jeanne.\nEn vrai sinon elle s'est faite tuée sans raison...`
-    addNarration4(bText, false, 'whitesmoke', 'black')
+    addNarration4(bText, false, 'white', 'black')
     bText = `Alors euh... on va dire que Jeanne, quasiment morte mais pas tout à fait, arriva à se trainer jusqu'à la cave juste à côté.\nA l'intérieur, il y a avait une machine qui servait, euh, euh..., je sais !\nA REMONTER LE TEMPS !`
-    addNarration5(bText, false, 'whitesmoke', 'black')
+    addNarration5(bText, false, 'white', 'black')
     bText = `On recommence...\n(désolé pardon j'avais oublié ce petit détail d'histoire d'anniversaire)`
-    addNarration6(bText, true, 'whitesmoke', 'black')
+    addNarration6(bText, true, 'white', 'black')
     CACHE.eventTracker['isItYourBirthday'] = true
     CACHE.heldObject.update('money', imgFlyingMoney)
     teleport('mapLimogesBis', 32, 36)

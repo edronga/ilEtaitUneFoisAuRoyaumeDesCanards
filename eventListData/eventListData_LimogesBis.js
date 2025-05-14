@@ -41,7 +41,7 @@ bAction = function(){
     addNarration2(bText, false, 'black', 'lightCyan')
     bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe.\nGenre Hawaï ou Tahiti.\n\n(Il se trouvait néamnmois qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
     addNarration3(bText, false, 'black', 'lightCyan')
-    bText = `Et au fait, c'était son anniversaire aujourd'hui`
+    bText = `Et au fait, c'était son anniversaire aujourd'hui.\n(C'est un détail important pour la suite de l'histoire)`
     addNarration4(bText, true, 'black', 'lightCyan')
     eventListLimogesBis.remove('introBirthday')
 }
@@ -107,7 +107,7 @@ eventListLimogesBis.add(bName, bCondition, bAction)
 
 bName = 'panelSpeechTheOneNearTheForbiddenHouse'
 bCondition = function(){
-    if (checkIfPosition(48,26)() && CACHE.targetTile.x === 48 && CACHE.targetTile.y === 25){
+    if (checkIfPosition(48,27)() && CACHE.targetTile.x === 48 && CACHE.targetTile.y === 26){
         return true
     }
     return false
@@ -151,7 +151,7 @@ bName = 'lookAtThePanel'
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43]]
+        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43], [12,30]]
         list.forEach((position) => {
             if (position[0] === CACHE.player.tilePosition.x && position[1] === CACHE.player.tilePosition.y){
                 r = true
@@ -169,7 +169,7 @@ eventListLimogesBis.add(bName, bCondition, bAction)
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43]]
+        const list = [[28,19], [44,19], [48,27], [17,35], [28,36], [39,43], [12,30]]
         list.forEach((position) => {
             if (position[0] === CACHE.player.tilePosition.x && position[1] === CACHE.player.tilePosition.y){
                 r = true
@@ -187,7 +187,7 @@ bName = 'goInFrontOfThePanel'
 bCondition = function (){
     let condition = function(){
         let r = false ;
-        const list = [[28,18], [44,18], [48,26], [17,34], [28,35], [39,42]]
+        const list = [[28,18], [44,18], [48,26], [17,34], [28,35], [39,42], [12,30]]
         list.forEach((position) => {
             if (position[0] === CACHE.targetTile.x && position[1] === CACHE.targetTile.y){
                 r = true

@@ -65,7 +65,7 @@ bAction = function(){
         case 'hairDo':
             bText = `Il faudrait juste que je rafraichisse ma coiffure et c'est parti pour l'aventure !`
             addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['coiffure'], sailorImg, false) 
-            bText = `Jeanne ferma les yeux et laisser échapper un long soupir. Sa nouvelle coiffure de cheveux était ridicule, mais c'était probablement le truc en vogue à Biarritz.\nElle choisit de sacrifier sa coupe en échange contre une planche de surf. Une planche de surf était le passeport évident qui lui manquait.`
+            bText = `Jeanne ferma les yeux et laissa échapper un long soupir. Sa nouvelle coiffure de cheveux était ridicule, mais c'était probablement le truc en vogue à Biarritz.\nElle choisit de sacrifier sa coupe en échange contre une planche de surf. Une planche de surf était le passeport évident qui lui manquait.`
             addNarration2(bText, true, 'black', 'lightblue')
             CACHE.eventTracker['wasSurfingPlankObtained'] = true
             CACHE.heldObject.update('surfingPlank', imgSurfingPlank)

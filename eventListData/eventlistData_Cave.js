@@ -31,7 +31,7 @@ bCondition = function(){
 
 bAction = function(){
     if (CACHE.eventTracker['isItYourBirthday'] !== true && CACHE.eventTracker['hasInteractedWithMachine'] === undefined){
-        bText = `Jeanne se retrouva devant une machine qui ne ressemblait à rien. Sans doute rien à voir. Et aucune utilité ou intérêt narratif entraperçu de près ou de loin.`
+        bText = `Jeanne se retrouva devant une machine qui ne ressemblait à rien. Sans doute rien à voir avec sa vie à elle. Et aucune utilité ou intérêt narratif entraperçu de près ou de loin.`
         addNarration(bText, true, 'black', 'lightCyan')
     }
     else if (CACHE.eventTracker['isItYourBirthday'] === true){
