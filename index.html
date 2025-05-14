@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <link rel="icon" type="image/x-icon" href="Images/imgEyeRollEmoji.png">
+    <title>Il Etait Une Fois Au Royaume Des Canards</title>
+  </head>
+  <body>
+    <div id="myContent">
+      <div id = "loadingPageImage">
+      </div>
+    </div>
+    <div id = "myButtons">
+      <div id = "buttonLeft"></div>
+      <div id = "buttonMiddle"></div>
+      <div id = "buttonRight"></div>
+    </div>
+    <script src = "data.js"></script>
+    <script src = "generateMapMode.js"></script>
+    <script src = "generateCharacterSpeech.js"></script>
+    <script src = "generateNarration.js"></script>
+    <script src = "playMusic.js"></script>
+    <script src = "eventListFunctions.js"></script>
+    <script src = "eventListData.js"></script>
+    <script src = "eventListData/eventListData_Biarritz.js"></script>
+    <script src = "eventListData/eventListData_BikeShop.js"></script>
+    <script src = "eventListData/eventlistData_Cave.js"></script>
+    <script src = "eventListData/eventListData_Elevator.js"></script>
+    <script src = "eventListData/eventListData_Harbour.js"></script>
+    <script src = "eventListData/eventListData_Hospital.js"></script>
+    <script src = "eventListData/eventListData_House.js"></script>
+    <script src = "eventListData/eventListData_Limoges.js"></script>
+    <script src = "eventListData/eventListData_Mart.js"></script>
+    <script src = "eventListData/eventListData_Museum.js"></script>
+    <script src = "eventListData/eventListData_Passage.js"></script>
+    <script src = "eventListData/eventListData_Pool.js"></script>
+    <script src = "eventListData/eventListData_Road.js"></script>
+    <script src = "eventListData/eventListData_LimogesBis.js"></script>
+    <script src = "eventListData/eventListData_LimogesPast.js"></script>
+    <script src = "startingScreen.js"></script>
+    <script src = "titleScreen.js"></script>
+    <script src= "main.js"></script>
+  </body>
+  
+  <style>
+    body{
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    #myContent{
+      width: 100vw;
+      height: 80vh;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      text-wrap: pretty;
+    }
+    #loadingPageImage{
+      width: 100vw;
+      height: 80vh;
+      background-image: url(Images/imgHourglass.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    #myButtons{
+      width: 100vw;
+      height: 20vh;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      grid-template: "buttonLeft buttonMiddle buttonRight" auto / 1fr 1fr 1fr ;
+    }
+    #buttonLeft{
+      width: 15vh;
+      height: 15vh;
+      grid-area: buttonLeft;
+      background-image: url(Images/imgEyeRollEmoji.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: solid 2px black;
+    }
+    #buttonMiddle{
+      width: 15vh;
+      height: 15vh;
+      grid-area: buttonMiddle;
+      background-image: url(Images/imgEyeRollEmoji.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: solid 2px black;
+    }
+    #buttonRight{
+      width: 15vh;
+      height: 15vh;
+      grid-area : buttonRight;
+      background-image: url(Images/imgEyeRollEmoji.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: solid 2px black;
+    }
+  </style>
+</html>
