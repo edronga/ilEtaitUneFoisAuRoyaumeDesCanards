@@ -68,7 +68,7 @@ bCondition = function(){
 }
 bAction = function(){
     if (CACHE.eventTracker['hasMetMartGirl'] === undefined){
-        bText = `Je suis un peu triste...\n Mon chat et malade. Je lui ai demandé ce qu'il avait et il m'a répondu "Tais-toi, t'es moche et t'es débile".\nJ'espère que mon chat à un cancer.`
+        bText = `Je suis un peu triste...\nMon chat est malade. Je lui ai demandé ce qu'il avait et il m'a répondu que j'étais mochet et débile".\nJ'espère que mon chat à un cancer.`
         addSpeech('???', 'darkMagenta', bText, 'black', [], martLadyImg, false) 
         bText = `Jeanne s'en foutait totalement de la vie de la vendeuse. \n- C'est trop triste les chats malades, dit-elle d'un air compatissant avec un sourire chaleureux.\nLa vendeuse lui offrit un sourire en retour.\nJeanne leva (intérieurement) les yeux au ciel.`
         addNarration2(bText, true, 'black', 'lightCyan')
@@ -78,16 +78,16 @@ bAction = function(){
     }
     switch (CACHE.heldObject.value){
         case 'money':
-            bText = `Coucou encore !.\nQu'est-ce que ce sera aujourd'hui ?\nUn piège à chat ? Une muselière pour chat ? Du poison pour euthanasier son chat ? Du beurre ?`
+            bText = `Coucou encore !.Qu'est-ce que ce sera aujourd'hui ?\nUn piège à chat ? Une muselière pour chat ? Du poison pour euthanasier son chat ? Du beurre ?`
             addSpeech('Sarah Masse', 'darkMagenta', bText, 'black', ['beurre'], martLadyImg, false) 
-            bText = `Curieuse coincidence, pensa Jeanne. Il se trouvait justement qu'elle avait tout juste assez d'argent pour acheter du beurre. Et elle n'avait (encore) de chat.`
+            bText = `Curieuse coïncidence, pensa Jeanne. Il se trouvait justement qu'elle avait tout juste assez d'argent pour acheter du beurre.\nEt elle n'avait pas (encore) de chat.`
             addNarration2(bText, true, 'black', 'lightCyan')
             CACHE.eventTracker['wasButterObtained'] = true
             break;
         default:
             bText = `J'espère que mon chat ne s'ennuie pas trop sans moi à la maison.\nLa dernière fois que je l'ai laissé trop longtemps, il en a profité pour faire caca dans mon lit.  `
             addSpeech('Sarah Masse', 'darkMagenta', bText, 'black', ['beurre'], martLadyImg, false)
-            bText = `Jeanne se fit intérieurement la remarque que les gens qui avait des chats semblaient généralement mentallement instables voire fous à lier. Elle hésistait d'ailleurs elle même à adopter un petit chaton.`
+            bText = `Jeanne se fit intérieurement la remarque que les gens qui avaient des chats semblaient généralement mentallement instables voire fous à lier. Elle hésistait d'ailleurs elle même à adopter un petit chaton.`
             addNarration2(bText, true, 'black', 'lightCyan')
     }
     CACHE.eventTracker['stopTalkingToMartGirl'] = true

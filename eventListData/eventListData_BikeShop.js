@@ -141,10 +141,14 @@ bAction = function(){
     bText = `Qu'est que qui te ferait plaisir comme coiffure aujourd'hui, ma petite Jeanne ?`
     addSpeech('[Coco la Coiffeuse]', 'black', bText, 'black', [], hairdresserImg, false) 
     bText = `Premio Jeanne ne la connaissait pas et elle l'a trouvait un peu trop familière. Deuzio Jeanne avait beaucoup d'a priori sur les gens roux. Genre qu'ils puaient de la...\n- Surprenez-moi ! s'exclama-t-elle avec un grand sourire.\nTercio, elle aimait vivre dangereusement.`
-    addNarration2(bText, true, 'black', 'lightblue')
+    addNarration2(bText, false, 'black', 'lightblue')
+    bText = `Jeanne attendit patiemment pendant que la coiffeuse rousse lui refaisait la toiture.\nEh beh au final, c'était pas trop mal. Certes couleur blond pipi et un peu de travers...\nCa reflétait parfaitement sa personnalité !`
+    addNarration3(bText, true, 'black', 'lightblue')
     CACHE.heldObject.update('hairDo', imgHairdo)
     switchAttire('hair')
     teleport('mapBikeShop', 5,7)
+    eventListBikeShop.removeNpc('hairdresserGirl')
+    eventListBikeShop.addNpc('hairdresserGirl', nonPlayableCharacters.hairdresserLookingDown, 8, 7)
 
 }
 eventListBikeShop.add(bName, bCondition, bAction)

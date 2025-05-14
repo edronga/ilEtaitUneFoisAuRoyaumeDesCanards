@@ -7,7 +7,7 @@ eventListCave.add('goToRoad', checkIfPosition(5,9), ()=> {
     else if (CACHE.eventTracker['isItYourBirthday'] === true){
         bText = `Jeanne voulut sortir de la cave, mais elle se ravissa.\nOn ne pouvait pas revenir dans le passé.\nElle ferait mieux de se concentrer sur la machine à remonter le temps, pour essayer de, euh...`
         addNarration(bText, false, 'white', 'black')
-        bText = `Merde!`
+        bText = `... de revenir dans le passé...\n\n(Long soupir du narrateur qu'on n'entendait pas mais genre presque).`
         addNarration2(bText, true, 'white', 'black')
         teleport('mapCave', 5,8)
     }})
@@ -31,7 +31,7 @@ bCondition = function(){
 
 bAction = function(){
     if (CACHE.eventTracker['isItYourBirthday'] !== true && CACHE.eventTracker['hasInteractedWithMachine'] === undefined){
-        bText = `Jeanne se retrouva devant une machine impressionnante. Qui avait l'air d'avoir été oubliée là et de ne servir à rien`
+        bText = `Jeanne se retrouva devant une machine qui ne ressemblait à rien. Sans doute rien à voir. Et aucune utilité ou intérêt narratif entraperçu de près ou de loin.`
         addNarration(bText, true, 'black', 'lightCyan')
     }
     else if (CACHE.eventTracker['isItYourBirthday'] === true){

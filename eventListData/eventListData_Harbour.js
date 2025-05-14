@@ -53,9 +53,9 @@ bCondition = function(){
 }
 bAction = function(){
     if (CACHE.eventTracker['hasMetSailor'] === undefined){
-        bText = `Pendant 20 ans tout le monde s'est moqué de moi parce que j'avais une planche de surf alors qu'il n'y a pas la mer dans cette ville de bouseux. Maintenant j'ai un bateau !`
+        bText = `Pendant 20 ans tout le monde s'est moqué de moi parce que j'avais une planche de surf alors qu'il n'y a pas la mer à proximité. Mais maintenant j'ai un bateau !`
         addSpeech('???', 'black', bText, 'black', ['planche de surf'], sailorImg, false) 
-        bText = `Jeanne avait très mal à la tête.\n-Et quel beau bateau ! s'exclama-elle, avec un sourire radieux.\nElle leva les yeux aux ciels d'un air songeur. Et aussi pour d'un air exaspéré.`
+        bText = `Jeanne avait très mal à la tête.\n- Et quel beau bateau ! s'exclama-elle, avec un sourire radieux.\nElle leva les yeux au ciel d'un air songeur. Elle réfléchit à la stupidité de la condition humaine. Ca n'arrangea pas son mal de tête.`
         addNarration2(bText, true, 'black', 'lightblue')
         CACHE.eventTracker['hasMetSailor'] = true
         CACHE.eventTracker['stopTalkingToSailor'] = true
@@ -64,8 +64,8 @@ bAction = function(){
     switch (CACHE.heldObject.value){
         case 'hairDo':
             bText = `Il faudrait juste que je rafraichisse ma coiffure et c'est parti pour l'aventure !`
-            addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['cheveux'], sailorImg, false) 
-            bText = `Jeanne ferma les yeux et laisser échapper un long sourire. Sa nouvelle coiffure de cheveux était ridicule, mais c'était probablement le truc en vogue à Biarritz.\nElle sacrifia sa coupe en échange contre une planche de surf.`
+            addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['coiffure'], sailorImg, false) 
+            bText = `Jeanne ferma les yeux et laisser échapper un long soupir. Sa nouvelle coiffure de cheveux était ridicule, mais c'était probablement le truc en vogue à Biarritz.\nElle choisit de sacrifier sa coupe en échange contre une planche de surf. Une planche de surf était le passeport évident qui lui manquait.`
             addNarration2(bText, true, 'black', 'lightblue')
             CACHE.eventTracker['wasSurfingPlankObtained'] = true
             CACHE.heldObject.update('surfingPlank', imgSurfingPlank)
@@ -75,11 +75,11 @@ bAction = function(){
             break;
         case 'surfingPlank':
             bText = `Je viens de réaliser que certes j'ai un bateau, mais je ne vais pas pouvoir en profiter s'il n'y a pas de vent pour le faire avancer. Que faire...`
-            addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['cheveux'], sailorImg, false)
+            addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['cheveux'], sailorImg, true)
             break;
         default:
             bText = `Il faudrait juste que je rafraichisse ma coiffure et c'est parti pour l'aventure !`
-            addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['cheveux'], sailorImg, false) 
+            addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['coiffure'], sailorImg, false) 
             bText = `Jeanne lui proposa d'aller chez le coiffeur. Il fit la moue. C'était compréhensif. Beaucoup de gens n'aimaient pas qu'on les touche.`
             addNarrationé(bText, true, 'black', 'lightblue')
     }

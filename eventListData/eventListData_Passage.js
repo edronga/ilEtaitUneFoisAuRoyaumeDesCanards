@@ -64,7 +64,7 @@ bAction = function(){
     if (CACHE.eventTracker['hasMetPassageGuard'] === undefined){
         bText = `VOUS NE PASSEREZ PAS !\nAvant j'avais un vrai job. Un truc sérieux. Mais je me suis fais viré parce que je ne faisais pas mon travail\nMaitenant je fais le videur.`
         addSpeech('???', 'darkblue', bText, 'black', [], passageGuardImg, false) 
-        bText = `Jeanne sentit comme un petit papillon dans son estomac. Le mec était extrêment photogénique. D'un autre côté il paraissait totalement déjanté.\n-Je pars vivre à Biarritz, dit-elle avec un petit sourire séducteur.\nElle avait honte de ton un peu dragueur. Si bien même qu'elle en leva les yeux au ciel.`
+        bText = `Jeanne sentit comme un petit papillon dans son estomac. Le mec était extrêment photogénique. D'un autre côté il paraissait totalement déjanté.\n- Je pars vivre à Biarritz, dit-elle avec un petit sourire séducteur.\nElle avait honte de ton un peu dragueur. Si bien même qu'elle en leva les yeux au ciel.`
         addNarration2(bText, false, 'black', 'lightblue')
         bText = `Désolé mademoiselle madame, mais il vous manque un certain "je ne sais quoi".\nJe pense que vous devriez plutôt rester dans votre ville de bouseux.`
         addSpeech2('[Le Tueur de Temps]', 'darkblue', bText, 'black', [], passageGuardImg, false) 
@@ -78,7 +78,7 @@ bAction = function(){
         case 'money':
             bText = `Je ne peux pas vous laisser passer. Vous n'avez même pas assez d'argent pour me soudoyer. Vous devrier aller voir ailleurs si j'y suis.`
             addSpeech('[Tété le Tueur de Temps]', 'darkBlue', bText, 'black', ['argent'], passageGuardImg, false) 
-            bText = `INDICE\nPeut-être que Jeanne devrait justement aller voire au supermarché s'il y était. Sans vouloir être trop subtile avec les indices.`
+            bText = `INDICE\nPeut-être que Jeanne devrait justement aller voir au supermarché s'il y était. Sans vouloir être trop subtile avec les indices.`
             addNarration2(bText, true, 'white', 'black')
             break;
         case 'butter':
@@ -102,7 +102,7 @@ bAction = function(){
         case 'surfingPlank':
             bText = `Whouah !!\nVous avez une planche de surf ! Mais c'est-à-dire, princesse, que vous me dégagez tout de suite de cette ville de bouseux et vous allez vous rotir les miches à Biarritz !`
             addSpeech('[Tété le Tueur de Temps]', 'darkBlue', bText, 'black', ['planche de surf'], passageGuardImg, false) 
-            bText = `Les miches de Jeanne frétillèrent d'impatience`
+            bText = `Les miches de Jeanne frétillèrent d'impatience.`
             addNarration2(bText, true, 'white', 'black')
             teleport('mapPassage', 6, 5)
             eventListPassage.removeNpc('passageGuard')
@@ -111,7 +111,7 @@ bAction = function(){
             eventListPassage.remove('passageGuardSpeech')
             eventListPassage.add('smoothGetToRoad', () =>{return (CACHE.targetTile.x <= 0)? true: false;}, () =>{CACHE.targetTile = {x: 0, y:5}})
             eventListPassage.add('cantGoBack', checkIfPosition(7,5), () =>{
-                bText = `Jeanne hésita à repartir en arrière.\n- Ce qui est fait est fait, se dit-elle.\nElle versa une larme.\n- Le passé c'est le passé, commenta-elle.\nElle était triste de partir, et en même temps pleine d'excitation pour l'avenir.\n-T'as cliqué, t'assumes, résuma-t-elle...`
+                bText = `Jeanne hésita à repartir en arrière.\n- Ce qui est fait est fait, se dit-elle.\nElle versa une larme.\n- Le passé c'est le passé, commenta-t-elle.\nElle était triste de partir, et en même temps pleine d'excitation pour l'avenir.\n-T'as cliqué, t'assumes, résuma-t-elle...`
                 addNarration(bText, false, 'black', 'lightCyan')
                 bText = `...Bon allez on avance un peu. En gros Jeanne eu l'air folle à fond les violons devant le mec ultra-photogénique pendant 30 minutes. Et puis elle se décida (enfin) à faire avancer l'intrigue et à prendre la direction de Biarritz.`
                 addNarration2(bText, true, 'white', 'black')

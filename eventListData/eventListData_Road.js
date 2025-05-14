@@ -17,7 +17,7 @@ bAction = function(){
     addNarration2(bText, false, 'black', 'lightblue')
     bText = `\n\n\n----- FIN ----- \n\n\n`
     addNarration3(bText, false, 'black', 'lightblue')
-    bText = `Oups pardon merde j'ai totalement oublié de mentionner que c'était l'anniversaire de Jeanne.\nEn vrai sinon elle s'est fait tué sans raison...`
+    bText = `Oups pardon merde j'ai totalement oublié de mentionner que c'était l'anniversaire de Jeanne.\nEn vrai sinon elle s'est faite tuée sans raison...`
     addNarration4(bText, false, 'whitesmoke', 'black')
     bText = `Alors euh... on va dire que Jeanne, quasiment morte mais pas tout à fait, arriva à se trainer jusqu'à la cave juste à côté.\nA l'intérieur, il y a avait une machine qui servait, euh, euh..., je sais !\nA REMONTER LE TEMPS !`
     addNarration5(bText, false, 'whitesmoke', 'black')

@@ -86,9 +86,9 @@ bAction = function(){
     if (CACHE.eventTracker['hasMetPoolVendor'] === undefined){
         bText = `Pour répondre à votre question avant que vous ne la posiez : je ne sais pas qui est l'abruti qui a eu l'idée d'installer un stand à hot dogs en plein milieu d'une piscine municipale.`
         addSpeech('???', 'black', bText, 'black', [], poolVendorImg, false) 
-        bText = `Jeanne trouvait pourtant que c'était une excellente idée.\n- Non mais c'est vrai qu'on est entourés d'idiots, dit-elle, se permettant mmême un grand sourire béat.\nElle leva même les yeux au ciel pour mieux ponctuer sa réaction.`
+        bText = `Jeanne trouvait pourtant que c'était une excellente idée.\n- Non mais c'est vrai qu'on est entouré d'idiots, dit-elle, se permettant même un grand sourire béat.\nElle leva les yeux au ciel pour mieux ponctuer sa réaction.`
         addNarration2(bText, false, 'black', 'lightblue')
-        bText = `La logique, et je souligne que Jeanne est d'accord avec moi. Les gens ont envie de se faire plaisir après avoir fait du sport (plaisir genre MacDo ou HotDog pour ne pas faire de pub). Les gens ont envie de faire perdre des calories après avoir mangé dégueulasse.\nStand de hotdog dans une piscine. CQFD.`
+        bText = `La logique, et je souligne que Jeanne est d'accord avec moi : () les gens ont envie de se faire plaisir après avoir fait du sport (plaisir genre MacDo ou HotDog pour ne pas faire de pub)/ (2) Les gens ont des calories à perdre après avoir mangé dégueulasse.\n=> Solutions = stand de hotdog dans une piscine. CQFD.`
         addNarration3(bText, true, 'white', 'black')
         CACHE.eventTracker['hasMetPoolVendor'] = true
         CACHE.eventTracker['stopTalkingToPoolVendor'] = true

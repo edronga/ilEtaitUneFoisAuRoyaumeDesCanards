@@ -92,7 +92,7 @@ bAction = function(){
     addNarration(bText, false, 'black', 'lightCyan')
     bText = `- J'en ai marre, dit-elle encore, de tous ces gens cons.\n(Désolé encore...)\n- J'en ai marre, renchérit-elle, de cette ville de bouseux. \n\nLa liste continue, mais je vais simplifier. En gros : "J'en ai marre, j'aime me plaindre, regardez-moi, bla bla bla".`
     addNarration2(bText, false, 'black', 'lightCyan')
-    bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe.\nGenre Hawaï ou Tahiti. \n(Il se trouvait néanmoins qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre.\nDu coup, à la place elle décida d'aller vivre à Biarritz).`
+    bText = `- Je pense que je vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe.\nGenre Hawaï ou Tahiti. \n(Il se trouvait néanmoins qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre.\nDu coup, à la place elle décida d'aller vivre à Biarritz).`
     addNarration3(bText, true, 'black', 'lightCyan')
     eventListLimoges.remove('introStandard')
 }
@@ -122,7 +122,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `La personne qui lit cela est bête comme ses pieds.`
-    addSpeech('Pipeau le Poteau', 'saddleBrown', bText, 'black', [], brownWoodenSignImg, false)
+    addSpeech('Pipeau le Poteau', 'saddleBrown', bText, 'black', [], brownWoodenSignImg, true)
     bText = 'lol \u{1F602}'
     addNarration2(bText, true, 'white', 'black')
     CACHE.targetTile = {x: 17, y: 35}
@@ -137,8 +137,8 @@ bCondition = function(){
     return false
 }
 bAction = function (){
-    bText = `Le monsieur qui vit à \u2193 a un bâteau.\nCe qui est très cons, il n'y a pas la mer dans cette ville de bouseux.\n\u21D1 Piscine municipale`
-    addSpeech('Patoche la Patate', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    bText = `Le monsieur qui vit à \u2190 a un bâteau.\nCe qui est très con, il n'y a pas la mer dans cette ville de bouseux.\n\u21D3 Piscine municipale`
+    addSpeech('Patoche la Patate', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 28, y: 19}
 }
 eventListLimoges.add(bName, bCondition, bAction)
@@ -152,7 +152,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `Musée de la Porcelaine\n\nAttention à ne rien casser.`
-    addSpeech('Pedro est Perdu', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    addSpeech('Pedro est Perdu', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 44, y: 19}
 }
 eventListLimoges.add(bName, bCondition, bAction)
@@ -166,7 +166,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `\u2190 Supermarché (il faut de l'argent c'est pas les restos du coeur)`
-    addSpeech('Pludidé le Panneau', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    addSpeech('Pludidé le Panneau', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 48, y: 26}
 }
 eventListLimoges.add(bName, bCondition, bAction)
@@ -180,7 +180,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `Pas de pub SVP.\n (note Mr Lesjans : sauf catalogues de lingerie)`
-    addSpeech('Famille Lesjans', 'saddleBrown', bText, 'black', [], letterBoxImg, false)
+    addSpeech('Famille Lesjans', 'saddleBrown', bText, 'black', [], letterBoxImg, true)
     CACHE.targetTile = {x: 39, y: 43}
 }
 eventListLimoges.add(bName, bCondition, bAction)
@@ -194,7 +194,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `\u2190 Biarritz.\nWesh.`
-    addSpeech('Nono le NeauPa des Cités', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    addSpeech('Nono le NeauPa des Cités', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 12, y: 30}
 }
 eventListLimoges.add(bName, bCondition, bAction)
@@ -266,7 +266,7 @@ eventListLimoges.add(bName, bCondition, bAction)
 bName = 'goToHospital'
 bCondition = checkIfPosition(32, 34)
 bAction = function(){
-    bText = `- Tiens et si j'allais faire un bisou à mes anciennes collègues. Je vais leur dire que je quitte cette ville de bouseux.\n Jeanne était infirmière de profession. Ses anciennes collègues bouseuses l'appréciaientt beaucoup et ne souhaitaient pas du tout qu'elle finisse dévorée par le monstre de l'ascenceur hanté`
+    bText = `- Tiens et si j'allais faire un bisou à mes anciennes collègues. Je vais leur dire que je quitte cette ville de bouseux.\n Jeanne était infirmière de profession. Ses anciennes collègues bouseuses l'appréciaient beaucoup et ne souhaitaient pas du tout qu'elle finisse dévorée par le fantôme de l'ascenceur hanté.`
     addNarration(bText, true, 'black','lightCyan')
     teleport('mapHospitalHall', 15, 22)
 }

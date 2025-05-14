@@ -42,7 +42,7 @@ bAction = function(){
     bText = `- Je pense que vais aller vivre quelque part avec du soleil, des jolies filles et de la bonne bouffe.\nGenre Hawaï ou Tahiti.\n\n(Il se trouvait néamnmois qu'elle était fauchée. Elle avait à peine de quoi s'acheter du beurre. \nDu coup, à la place elle décida d'aller vivre à Biarritz)`
     addNarration3(bText, false, 'black', 'lightCyan')
     bText = `Et au fait, c'était son anniversaire aujourd'hui`
-    addNarration3(bText, true, 'black', 'lightCyan')
+    addNarration4(bText, true, 'black', 'lightCyan')
     eventListLimogesBis.remove('introBirthday')
 }
 eventListLimogesBis.add(bName, bCondition, bAction)
@@ -70,7 +70,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `La personne qui lit cela est bête comme ses pieds.`
-    addSpeech('Pipeau le Poteau', 'saddleBrown', bText, 'black', [], brownWoodenSignImg, false)
+    addSpeech('Pipeau le Poteau', 'saddleBrown', bText, 'black', [], brownWoodenSignImg, true)
     bText = 'lol \u{1F602}'
     addNarration2(bText, true, 'white', 'black')
     CACHE.targetTile = {x: 17, y: 35}
@@ -85,8 +85,8 @@ bCondition = function(){
     return false
 }
 bAction = function (){
-    bText = `Le monsieur qui vit à \u2193 a un bâteau.\nCe qui est très cons, il n'y a pas la mer dans cette ville de bouseux.\n\u21D1 Piscine municipale`
-    addSpeech('Patoche la Patate', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    bText = `Le monsieur qui vit à \u2190 a un bâteau.\nCe qui est très con, il n'y a pas la mer dans cette ville de bouseux.\n\u21D3 Piscine municipale`
+    addSpeech('Patoche la Patate', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 28, y: 19}
 }
 eventListLimogesBis.add(bName, bCondition, bAction)
@@ -100,7 +100,7 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `Musée de la Porcelaine\n\nAttention à ne rien casser.`
-    addSpeech('Pedro est Perdu', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    addSpeech('Pedro est Perdu', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 44, y: 19}
 }
 eventListLimogesBis.add(bName, bCondition, bAction)
@@ -113,8 +113,8 @@ bCondition = function(){
     return false
 }
 bAction = function (){
-    bText = `\u2193 Supermarché (il faut de l'argent c'est pas les restos du coeur)`
-    addSpeech('Pludidé le Panneau', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    bText = `\u2190 Supermarché (il faut de l'argent c'est pas les restos du coeur)`
+    addSpeech('Pludidé le Panneau', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
     CACHE.targetTile = {x: 48, y: 26}
 }
 eventListLimogesBis.add(bName, bCondition, bAction)
@@ -128,8 +128,22 @@ bCondition = function(){
 }
 bAction = function (){
     bText = `Pas de pub SVP.\n (note Mr Lesjans : sauf catalogues de lingerie)`
-    addSpeech('Famille Lesjans', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, false)
+    addSpeech('Famille Lesjans', 'saddleBrown', bText, 'black', [], letterBoxImg, true)
     CACHE.targetTile = {x: 39, y: 43}
+}
+eventListLimogesBis.add(bName, bCondition, bAction)
+
+bName = 'panelNextToPassage'
+bCondition = function(){
+    if (checkIfPosition(12,30)() && CACHE.targetTile.x === 12 && CACHE.targetTile.y === 29){
+        return true
+    }
+    return false
+}
+bAction = function (){
+    bText = `\u2190 Biarritz.\nWesh.`
+    addSpeech('Nono le NeauPa des Cités', 'saddleBrown', bText, 'black', [], whiteWoodenSignImg, true)
+    CACHE.targetTile = {x: 12, y: 30}
 }
 eventListLimogesBis.add(bName, bCondition, bAction)
 
@@ -215,12 +229,12 @@ eventListLimogesBis.add(bName, bCondition, bAction)
 
 bName = 'fastForWardNextChapter'
 bCondition = function (){
-    if (checkIfPosition(39, 25)() || checkIfPosition (7, 31)() ||  checkIfPosition(23,42)() || checkIfPosition(26,25)()|| checkIfPosition(21,18)() || checkIfPosition(42,42)() || checkIfPosition(42, 18)()){
+    if (checkIfPosition(39, 25)() || checkIfPosition (7, 31)() ||  checkIfPosition(23,42)() || checkIfPosition(26,25)()|| checkIfPosition(21,18)() || checkIfPosition(42,42)() || checkIfPosition(42, 18)() || checkIfPosition(32,34)()){
         return true
     }
 }
 bAction = function(){
-    bText = `- Bon en vrai, j'ai pas du tout envie de me faire chier à tout refaire, pensa Jeanne.\n On n'a qu'à dire que j'ai tout refait, et cette fois-ci je vais directement dans la cave pour utiliser la machine à remonter le temps pour empêcher le mec qui m'a trucidé de voir le jour.`
+    bText = `- Bon en vrai, j'ai pas du tout envie de me faire chier à tout refaire, pensa Jeanne.\n On n'a qu'à dire que j'ai tout refait voilà pif paf c'est fait, mais cette fois-ci je vais directement dans la cave pour utiliser la machine à remonter le temps pour empêcher le mec qui m'a trucidé de voir le jour.`
     addNarration(bText, true, 'black','lightCyan')
     teleport('mapCave', 5,8)
 }
