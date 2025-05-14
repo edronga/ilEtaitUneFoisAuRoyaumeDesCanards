@@ -334,6 +334,7 @@ function switchAttire(attireName){
             baseFormLookingUp = standardBaseFormLookingUp
             baseFormLookingLeft = standardBaseFormLookingLeft
             baseFormLookingRight = standardBaseFormLookingRight
+            baseSprite = baseFormLookingDown
             
             characterSpritesRunningDown[0] = standardRunningDown[0]
             characterSpritesRunningDown[1] = standardRunningDown[1]
@@ -369,6 +370,7 @@ function switchAttire(attireName){
             baseFormLookingUp = variantHairBaseFormLookingUp
             baseFormLookingLeft = variantHairBaseFormLookingLeft
             baseFormLookingRight = variantHairBaseFormLookingRight
+            baseSprite = baseFormLookingDown
 
             characterSpritesRunningDown[0] = variantHairRunningDown[0]
             characterSpritesRunningDown[1] = variantHairRunningDown[1]
@@ -404,6 +406,7 @@ function switchAttire(attireName){
             baseFormLookingUp = variantBikiniBaseFormLookingUp
             baseFormLookingLeft = variantBikiniBaseFormLookingLeft
             baseFormLookingRight = variantBikiniBaseFormLookingRight
+            baseSprite = baseFormLookingDown
 
             characterSpritesRunningDown[0] = variantBikiniRunningDown[0]
             characterSpritesRunningDown[1] = variantBikiniRunningDown[1]
