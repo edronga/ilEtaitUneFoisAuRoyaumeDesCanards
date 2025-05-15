@@ -516,5 +516,7 @@ nonPlayableCharacters['sailorBlondHairLookingDown'] = new Image()
 nonPlayableCharacters['sailorBlondHairLookingDown'].src = 'Images/sailorBlondHairLookingDown.png'
 nonPlayableCharacters['birthdayKillerLookingRight'] = new Image()
 nonPlayableCharacters['birthdayKillerLookingRight'].src = 'Images/birthdayKillerLookingRight.png'
+nonPlayableCharacters['ghostLookingDown'] = new Image()
+nonPlayableCharacters['ghostLookingDown'].src = 'Images/characterGhost.png'
 
 
