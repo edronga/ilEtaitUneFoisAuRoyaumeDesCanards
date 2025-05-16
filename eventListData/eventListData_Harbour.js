@@ -81,7 +81,7 @@ bAction = function(){
             bText = `Il faudrait juste que je rafraichisse ma coiffure et c'est parti pour l'aventure !`
             addSpeech('[Capitaine Crochet]', 'black', bText, 'black', ['coiffure'], sailorImg, false) 
             bText = `Jeanne lui proposa d'aller chez le coiffeur. Il fit la moue. C'était compréhensif. Beaucoup de gens n'aimaient pas qu'on les touche.`
-            addNarrationé(bText, true, 'black', 'lightblue')
+            addNarration2(bText, true, 'black', 'lightblue')
     }
     CACHE.eventTracker['stopTalkingToSailor'] = true
     

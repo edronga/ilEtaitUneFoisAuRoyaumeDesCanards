@@ -31,16 +31,10 @@ eventListRoad.add(bName, bCondition, bAction)
 
 bName = 'smoothGoTalkToBirthdayKiller'
 bCondition = function(){
-    let condition = function() {
-        let r = false;
-        [[9,24], [9,25], [9,26], [10,24], [10,25], [10,26]].forEach((t)=>{
-        if (t[0] === CACHE.targetTile.x && t[1] === CACHE.targetTile.y){
-            r = true
-        }
-        })
-        return r;
-    }()
-    return condition
+    if (CACHE.targetTile.x <= 10){
+        return true
+    }
+    return false
 }
 bAction = function(){
     CACHE.targetTile = {
