@@ -122,7 +122,7 @@ bAction = function(){
         default:
             bText = `Ce qui est embêtant c'est qu'on n'a plus de graisse de cheveux sous le coude. A la rigueur la graisse de jambon ça pourrrait peut-être le faire...`
             addSpeech('[Toto fait du Vélo]', 'black', bText, 'black', [], bikeShopOwnerImg, false) 
-            bText = `Jeanne n'avait rien à contribuer. Comme souvent. Même si la l'empêchait rarement de donner son avis.`
+            bText = `Jeanne n'avait rien à contribuer. Comme souvent. Même si ça l'empêchait rarement de donner son avis.`
             addNarration2(bText, true, 'black', 'lightblue')
     }
     CACHE.eventTracker['stopTalkingToBikeShopGuy'] = true
